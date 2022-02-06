@@ -22,5 +22,6 @@ def external_folder_backup():
         backup_profile_process = BackUpProfile(profile_config)
         backup_profile_process.start()
 
+
 if __name__ == "__main__":
     external_folder_backup()
