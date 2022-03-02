@@ -18,9 +18,9 @@ def external_folder_backup():
 
     for profile in config.get_profiles():
         logging.info(f"Running backup for {profile} profile")
-        profile_config = config.get_config_for_profile(profile)
-        backup_profile_process = BackUpProfile(profile_config)
-        backup_profile_process.start()
+        profile_config = config.get_profile_values(profile)
+        backup_profile = BackUpProfile(profile_config)
+        backup_profile()
 
 
 if __name__ == "__main__":

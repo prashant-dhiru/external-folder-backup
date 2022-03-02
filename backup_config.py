@@ -8,10 +8,11 @@ class BackUpConfig:
         self._parse()
 
     def _parse(self):
+        # todo if config_value is not propeer log indo and delete profile
         pass
 
     def get_profiles(self):
         return self.config.sections()
 
-    def get_config_for_profile(self, profile):
+    def get_profile_values(self, profile):
         return dict(self.config[profile])
